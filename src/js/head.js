@@ -6,8 +6,8 @@ class Head extends Component{
         return(
             <div>
 
-                <Title/>
-                <Title/>
+                <Title content={"hello"}/>
+                <Title content = "world"/>
                 <Title/>
 
             </div>
