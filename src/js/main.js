@@ -16,8 +16,8 @@ class Main extends Component {
         return (
             <div>
                 <Head/>
-                {this.users.map((u) => {
-                    return <List user={u}/>
+                {this.users.map((u, i) => {
+                    return <List user={u} key={i}/>
                 })}
             </div>
         )
