@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 
 import Head from './head'
 import List from './list'
+import Bbs from './bbs/BbsApp'
 
 class Main extends Component {
 
@@ -13,6 +14,8 @@ class Main extends Component {
     ]
 
     render() {
+        /*
+
         return (
             <div>
                 <Head/>
@@ -20,6 +23,11 @@ class Main extends Component {
                     return <List user={u} key={i}/>
                 })}
             </div>
+        )*/
+
+
+        return(
+            <Bbs/>
         )
     }
 }
