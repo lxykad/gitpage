@@ -5,8 +5,8 @@ import '../css/title.css'
 class Title extends Component {
 
     // 也可以在这里设置默认值,而且这里设置默认值的话，|| 操作符设置的默认值无效
-    static defaultProps={
-        content:"content"
+    static defaultProps = {
+        content: "content"
     }
 
     constructor() {
@@ -19,14 +19,14 @@ class Title extends Component {
         const content = this.props.content || "title"
 
         function click() {
-            alert(content)
+            console.log('click')
         }
 
         return (
 
-            <div className='title' onClick={click}>
+            <div className='title' onClick={this.props.headClick}>
 
-                <text>{content}</text>
+                <input type={'button'} value={content} className='button'/>
 
             </div>
         )
