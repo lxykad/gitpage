@@ -42,7 +42,6 @@ class Bbs extends Component {
             </div>
         )
     }
-
 }
 
 export default Bbs;
