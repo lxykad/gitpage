@@ -51,3 +51,21 @@
 .button-content{
     padding: 10px;
 }
+.list-item{
+    display: flex;
+    border-bottom: 1px solid #f1f1f1;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    min-height: 50px;
+}
+.list-item span {
+    color: #00a3cf;
+    font-style: italic;
+}
+.list-item.name{
+    flex-shrink: 0;
+}
+.list-item p {
+    margin: 0;
+    /*text-indent: 2em;*/
+}
