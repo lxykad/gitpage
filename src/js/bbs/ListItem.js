@@ -22,7 +22,7 @@ class ListItem extends Component {
         this._updateTimeString()
         //开启定时器，5秒刷新一下发布时间
         this._timer = setInterval(
-            this._updateTimeString.bind(this),5000
+            this._updateTimeString.bind(this), 5000
         )
     }
 
@@ -36,6 +36,12 @@ class ListItem extends Component {
         })
     }
 
+    _handItemDelete(index) {
+        if (this.props.onDeleteComment) {
+            this.props.onDeleteComment(this.props.index)
+        }
+    }
+
     render() {
         return (
             <div className='list-item'>
@@ -44,6 +50,8 @@ class ListItem extends Component {
                 </div>
                 <p>{this.props.user.content}</p>
                 <span className='content-time'>{this.state.timeString}</span>
+
+                <input type='button' value='删除' onClick={this._handItemDelete.bind(this)}/>
 
             </div>
 

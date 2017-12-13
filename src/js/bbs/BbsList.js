@@ -7,16 +7,20 @@ class BbsList extends Component {
         comments: []
     }
 
+    onDeleteClick(index) {
+        if (this.props.onCommentListDelete) {
+            this.props.onCommentListDelete(index)
+        }
+    }
+
     render() {
 
         return (
             <div>
                 {this.props.comments.map((comment, i) =>
-                    <ListItem user={comment} key={i}/>
+                    <ListItem user={comment} key={i} index={i} onDeleteComment={this.onDeleteClick.bind(this)}/>
                 )}
-
             </div>
-
         )
     }
 }

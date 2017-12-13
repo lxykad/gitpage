@@ -15,7 +15,7 @@ class Bbs extends Component {
         }
     }
 
-    componentWillMount(){
+    componentWillMount() {
         this.loadLocalComments()
     }
 
@@ -41,23 +41,31 @@ class Bbs extends Component {
     }
 
     // load 本地评论内容
-    loadLocalComments(){
+    loadLocalComments() {
         let list = localStorage.getItem('comments')//普通字符串
         if (list) {
             list = JSON.parse(list) // object 对象数组
-            this.setState({comments:list})
+            this.setState({comments: list})
         }
     }
 
-    _saveComments(comments){
-        localStorage.setItem('comments',JSON.stringify(comments))
+    _saveComments(comments) {
+        localStorage.setItem('comments', JSON.stringify(comments))
+    }
+
+    //删除评论
+    handDelete(index) {
+        var commtents = this.state.comments
+        commtents.splice(index, 1)
+        this.setState({commtents})
+        this._saveComments(commtents)
     }
 
     render() {
         return (
             <div className='wraper'>
                 <BbsInput onSubmit={this.handSubmit.bind(this)}/>
-                <BbsList comments={this.state.comments}/>
+                <BbsList comments={this.state.comments} onCommentListDelete={this.handDelete.bind(this)}/>
             </div>
         )
     }
