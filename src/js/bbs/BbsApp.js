@@ -15,6 +15,10 @@ class Bbs extends Component {
         }
     }
 
+    componentWillMount(){
+        this.loadLocalComments()
+    }
+
     handSubmit(comment) {
 
         if (!comment) {
@@ -32,6 +36,21 @@ class Bbs extends Component {
         this.setState({
             comments: this.state.comments
         })
+        // 序列化评论内容
+        this._saveComments(this.state.comments)
+    }
+
+    // load 本地评论内容
+    loadLocalComments(){
+        let list = localStorage.getItem('comments')//普通字符串
+        if (list) {
+            list = JSON.parse(list) // object 对象数组
+            this.setState({comments:list})
+        }
+    }
+
+    _saveComments(comments){
+        localStorage.setItem('comments',JSON.stringify(comments))
     }
 
     render() {
