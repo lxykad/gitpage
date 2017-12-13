@@ -2,30 +2,40 @@
     display: flex;
     background-image: url("../img/home_bg.png");
     width: 100%;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.body-center {
+    display: flex;
+    width: 632px;
+    height: 383px;
+    flex-direction: row;
+    background-image: url("../img/home_center_bg.png");
+    margin-top: 280px;
     justify-content: center;
     align-items: center;
     background-size: contain;
 }
 
-.body-center {
-    width: 632px;
-    height: 383px;
-    background-image: url("../img/home_center_bg.png");
-    display: flex;
-    margin-top: 280px;
-    justify-content: center;
-    align-items: center;
-}
-
 .code-ios {
-    margin-left: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 20px;
+    margin-left: 20px;
 }
 
 .tv-ios {
     color: #ffffff;
+    margin-bottom: 15px;
+    font-size: 14px;
 }
 
 .iv-ios {
-    margin-top: 10px;
+    margin-top: 15px;
 
 }

@@ -16,7 +16,7 @@ class Body extends Component{
                         <img src={require('../img/icon_ios.png')} className='iv-ios'/>
                     </div>
 
-                    <div>
+                    <div className='code-ios'>
                         <div className='tv-ios'>Android</div>
                         <img src={require('../img/code_android.png')} />
                         <img src={require('../img/icon_android.png')} className='iv-ios'/>
