@@ -3,7 +3,7 @@ import ListItem from './ListItem'
 
 class BbsList extends Component {
 
-   static defaultProps = {
+    static defaultProps = {
         comments: []
     }
 

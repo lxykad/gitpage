@@ -30,6 +30,13 @@
     font-size: 14px;
 }
 
+.content-time{
+
+    display: flex;
+    justify-content: center;
+
+}
+
 .name-input{
     border: 1px solid #e6e6e6;
     width: 400px;

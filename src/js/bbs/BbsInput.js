@@ -18,9 +18,9 @@ class BbsInput extends Component {
         super();
         this.state = {
             username: '',
-            content: ''
+            content: '',
+            createTime: ''
         }
-
     }
 
     componentWillMount() {
@@ -58,7 +58,7 @@ class BbsInput extends Component {
             })
         }*/
         this.setState({
-            username: name||null
+            username: name || null
         })
     }
 
@@ -69,15 +69,21 @@ class BbsInput extends Component {
     }
 
     /*
-    * 将content 传递给父组件
+    *  点击发布按钮
+    *  将content 传递给父组件
     * */
     handButtonPush(event) {
 
         if (this.props.onSubmit) {
             // 解构赋值
             const {username, content} = this.state
+
             // 通过回调将数据 回调给父组件
-            this.props.onSubmit({username, content})
+            this.props.onSubmit({
+                username: username,
+                content: content,
+                createTime:+new Date()
+            })
 
         } else {
             alert('no props')
