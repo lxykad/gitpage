@@ -4,6 +4,8 @@ import Head from './head'
 import List from './list'
 import Bbs from './bbs/BbsApp'
 
+import JThome from './jt/JThome'
+
 class Main extends Component {
 
     users = [
@@ -25,9 +27,13 @@ class Main extends Component {
             </div>
         )*/
 
-
-        return(
-            <Bbs/>
+        /*
+            评论组件
+            return(
+                <Bbs/>
+            )*/
+        return (
+            <JThome/>
         )
     }
 }

@@ -1,0 +1,31 @@
+.body {
+    display: flex;
+    background-image: url("../img/home_bg.png");
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background-size: contain;
+}
+
+.body-center {
+    width: 632px;
+    height: 383px;
+    background-image: url("../img/home_center_bg.png");
+    display: flex;
+    margin-top: 280px;
+    justify-content: center;
+    align-items: center;
+}
+
+.code-ios {
+    margin-left: 60px;
+}
+
+.tv-ios {
+    color: #ffffff;
+}
+
+.iv-ios {
+    margin-top: 10px;
+
+}

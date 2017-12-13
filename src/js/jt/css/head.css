@@ -1,0 +1,29 @@
+.jthead {
+    display: flex;
+    background-color: #222222;
+    height: 80px;
+    width: 100%;
+}
+
+.head-title {
+    display: flex;
+    flex-direction: column;
+    height: 80px;
+    width: 200px;
+    margin-left: 20%;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.head-title-cn {
+    color: #f1f1f1;
+
+
+}
+
+.head-title-en {
+    color: #f1f1f1;
+    font-size: 12px;
+    margin-top: 5px;
+}
