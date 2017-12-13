@@ -3,13 +3,22 @@ import Head from './js/Head'
 import Body from './js/Body'
 import './css/home.css'
 
-class JThome extends Component{
+class JThome extends Component {
 
-    render(){
-        return(
+
+    onIosClick() {
+        alert('ios')
+    }
+
+    onAndroidClick() {
+        alert('android')
+    }
+
+    render() {
+        return (
             <div className='home'>
                 <Head/>
-                <Body/>
+                <Body onIosClick={this.onIosClick.bind(this)} onAndroidClick={this.onAndroidClick.bind(this)}/>
             </div>
         )
     }
