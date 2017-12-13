@@ -26,6 +26,11 @@ class ListItem extends Component {
         )
     }
 
+    //组件销毁时 清楚定时器
+    componentWillUnmount() {
+        clearInterval(this._timer)
+    }
+
     _updateTimeString() {
         const user = this.props.user
         const duration = (+Date.now() - user.createTime) / 1000
@@ -42,13 +47,30 @@ class ListItem extends Component {
         }
     }
 
+    // 处理code文本
+    _getProcessedContent(content) {
+        return content
+            .replace(/&/g, "&amp;")
+            .replace(/</g, "&lt;")
+            .replace(/>/g, "&gt;")
+            .replace(/"/g, "&quot;")
+            .replace(/'/g, "&#039;")
+            .replace(/`([\S\s]+?)`/g, '<code>$1</code>')
+    }
+
     render() {
         return (
             <div className='list-item'>
                 <div className='name'>
                     <span>{this.props.user.username} </span>：
                 </div>
-                <p>{this.props.user.content}</p>
+                {/*<p>{this.props.user.content}</p>*/}
+                <p dangerouslySetInnerHTML={
+                    {
+                        __html: this._getProcessedContent(this.props.user.content)
+                    }
+                }/>
+
                 <span className='content-time'>{this.state.timeString}</span>
 
                 <input type='button' value='删除' onClick={this._handItemDelete.bind(this)}/>
