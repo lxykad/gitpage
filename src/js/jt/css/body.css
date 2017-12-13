@@ -1,11 +1,16 @@
 .body {
     display: flex;
+    flex: 1;
+    flex-direction: column;
     background-image: url("../img/home_bg.png");
     width: 100%;
     justify-content: center;
     align-items: center;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll;
+
 }
 
 .body-center {
@@ -14,10 +19,11 @@
     height: 383px;
     flex-direction: row;
     background-image: url("../img/home_center_bg.png");
-    margin-top: 280px;
+    margin-top: 380px;
+    margin-bottom: 100px;
     justify-content: center;
     align-items: center;
-    background-size: contain;
+    background-size: cover;
 }
 
 .code-ios {

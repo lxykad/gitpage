@@ -16,7 +16,7 @@ class JThome extends Component {
 
     render() {
         return (
-            <div className='home'>
+            <div>
                 <Head/>
                 <Body onIosClick={this.onIosClick.bind(this)} onAndroidClick={this.onAndroidClick.bind(this)}/>
             </div>
