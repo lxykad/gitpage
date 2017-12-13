@@ -61,10 +61,10 @@ class ListItem extends Component {
     render() {
         return (
             <div className='list-item'>
-                <div className='name'>
-                    <span>{this.props.user.username} </span>：
+                <div>
+                    <span className='name'>{this.props.user.username} </span>：
                 </div>
-                {/*<p>{this.props.user.content}</p>*/}
+
                 <p dangerouslySetInnerHTML={
                     {
                         __html: this._getProcessedContent(this.props.user.content)

@@ -69,8 +69,8 @@
     color: #00a3cf;
     font-style: italic;
 }
-.list-item.name{
-    flex-shrink: 0;
+.name{
+    text-overline-color: #222222;
 }
 .list-item p {
     margin: 0;
