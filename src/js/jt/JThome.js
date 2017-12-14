@@ -5,20 +5,22 @@ import './css/home.css'
 
 class JThome extends Component {
 
-    constructor(){
+    constructor() {
         super()
-        this.state={
-            download_url:"https://pro-app-qn.fir.im/55919faa1b837645003714fdbbaebc231b9035d8.apk?attname=2017-12-131.6.1-10610.apk_1.6.1.apk&e=1513238707&token=LOvmia8oXF4xnLh0IdH05XMYpH6ENHNpARlmPc-T:cDKqlFu1Ih7IotnG6OWVgctBDKI="
-
+        this.state = {
+            androidUrl: document.getElementById("android-url").getAttribute("value"),
+            iosUrl: document.getElementById("ios-url").getAttribute("value")
         }
     }
 
     onIosClick() {
-        window.open('https://fir.im/cfh2')
+        // window.open('https://fir.im/cfh2')
+        alert(this.state.iosUrl)
     }
 
     onAndroidClick() {
-        window.open(this.state.download_url)
+        // window.open(this.state.download_url)
+        alert(this.state.androidUrl)
     }
 
     render() {
