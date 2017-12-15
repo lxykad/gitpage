@@ -42,7 +42,7 @@ class Body extends Component {
             <div className='body'>
                 <div className='body-center'>
 
-                    <div className='code-ios'>
+                   <div className='code-ios'>
                         <div className='tv-ios'>IOS</div>
                         <img src={this.state.codeAndroid} className='code-img'/>
                         <img src={require('../img/icon_ios.png')} className='iv-ios'

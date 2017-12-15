@@ -1,3 +1,7 @@
+
+/*
+    整个body的背景样式
+*/
 .body {
     display: flex;
     flex: 1;
@@ -10,22 +14,26 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50% 50%;
-
 }
 
+/*
+    二维码背景区域样式
+*/
 .body-center {
     display: flex;
     width: 632px;
     height: 383px;
     flex-direction: row;
     background-image: url("../img/home_center_bg.png");
-    margin-top: 380px;
-    margin-bottom: 100px;
+    margin-top: 280px;
     justify-content: center;
     align-items: center;
     background-size: cover;
 }
 
+/*
+ 二维码一列 样式
+*/
 .code-ios {
     display: flex;
     flex-direction: column;
@@ -38,14 +46,11 @@
     color: #b7bde1;
     margin-bottom: 17px;
     font-size: 18px;
+
 }
 
 .iv-ios {
     margin-top: 17px;
-}
-
-.bt-android{
-
 
 }
 
