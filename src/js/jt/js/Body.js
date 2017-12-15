@@ -12,6 +12,14 @@ class Body extends Component {
         onAndroidClick: PropTypes.func
     }
 
+    constructor() {
+        super();
+        this.state = {
+            codeAndroid: document.getElementById("code-android").getAttribute("value"),
+            codeIos: document.getElementById("code-ios").getAttribute("value")
+        }
+    }
+
     handIosClick(event) {
         if (this.props.onIosClick) {
             this.props.onIosClick()
@@ -24,6 +32,11 @@ class Body extends Component {
         }
     }
 
+    /*
+    * <img src={require('../img/code_android.png')}/>
+    * <img src={this.state.codeIos} className='code-img'/>
+    * */
+
     render() {
         return (
             <div className='body'>
@@ -31,14 +44,14 @@ class Body extends Component {
 
                     <div className='code-ios'>
                         <div className='tv-ios'>IOS</div>
-                        <img src={require('../img/code_android.png')}/>
+                        <img src={this.state.codeAndroid} className='code-img'/>
                         <img src={require('../img/icon_ios.png')} className='iv-ios'
                              onClick={this.handIosClick.bind(this)}/>
                     </div>
 
                     <div className='code-ios'>
                         <div className='tv-ios'>Android</div>
-                        <img src={require('../img/code_android.png')}/>
+                        <img src={this.state.codeIos} className='code-img'/>
                         <img src={require('../img/icon_android.png')} className='iv-ios'
                              onClick={this.handAndroidClick.bind(this)}/>
                     </div>
