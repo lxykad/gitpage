@@ -14,23 +14,37 @@ class JThome extends Component {
     }
 
     onIosClick() {
-        // window.open('https://fir.im/cfh2')
-        alert(this.state.iosUrl)
+        if (!this.state.iosUrl) {
+            alert('请配置ios跳转地址')
+            return
+        }
+        window.open(this.state.iosUrl)
     }
 
     onAndroidClick() {
-        // window.open(this.state.download_url)
-        alert(this.state.androidUrl)
+        if (!this.state.androidUrl) {
+            alert('请配置app下载地址')
+            return
+        }
+        window.open(this.state.androidUrl)
     }
 
     render() {
 
         return (
 
-            <div className='home'>
+            <div className='home-root'>
 
-                <Head/>
-                <Body onIosClick={this.onIosClick.bind(this)} onAndroidClick={this.onAndroidClick.bind(this)}/>
+                <div className='home'>
+
+                    <Head/>
+                    <Body onIosClick={this.onIosClick.bind(this)} onAndroidClick={this.onAndroidClick.bind(this)}/>
+
+                </div>
+
+                <div>
+                    <img src={require('./img/ji_logo.png')} className='logo'/>
+                </div>
 
             </div>
         )
