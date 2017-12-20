@@ -9,7 +9,8 @@ class JThome extends Component {
         super()
         this.state = {
             androidUrl: document.getElementById("android-url").getAttribute("value"),
-            iosUrl: document.getElementById("ios-url").getAttribute("value")
+            iosUrl: document.getElementById("ios-url").getAttribute("value"),
+            logoUrl: document.getElementById("logo-url").getAttribute("value")
         }
     }
 
@@ -43,7 +44,8 @@ class JThome extends Component {
                 </div>
 
                 <div>
-                    <img src={require('./img/ji_logo.png')} className='logo'/>
+                    {/*<img src={require('./img/ji_logo.png')} className='logo'/>*/}
+                    <img src={this.state.logoUrl} className='logo'/>
                 </div>
 
             </div>
